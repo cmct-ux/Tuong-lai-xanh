@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tương Lai Xanh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="home" class="screen active">
+  <h1>🌱 TƯƠNG LAI XANH XIN CHÀO!!!</h1>
+  <p>Cùng hành động để bảo vệ môi trường!</p>
+  <button onclick="go('maps')">Bắt đầu</button>
+</div>
+
+<div id="maps" class="screen">
+  <h2>🌍 Chọn khu vực</h2>
+  <button onclick="chooseMap('forest')">🌳 Rừng</button>
+  <button onclick="chooseMap('city')">🏙️ Khu dân cư</button>
+  <button onclick="chooseMap('river')">🌊 Sông – Biển</button>
+  <button onclick="chooseMap('school')">🏫 Trường học</button>
+  <button onclick="chooseMap('factory')">🏭 Khu công nghiệp</button>
+</div>
+
+<div id="mission" class="screen">
+  <h2 id="missionText"></h2>
+  <button onclick="startGame()">Tiếp theo</button>
+</div>
+
+<div id="game" class="screen">
+  <div id="hud">⭐ắc
+    ⭐ Điểm: <span id="score">0</span>
+  </div>
+  <div id="world">
+    <div id="player"></div>
+  </div>
+</div>
+
+<div id="quiz" class="screen">
+  <h2 id="question"></h2>
+  <div id="choices"></div>
+</div>
+
+<div id="shop" class="screen">
+  <h2>🧢 Đổi trang phục</h2>
+  <p>Điểm: <span id="shopScore"></span></p>
+  <button onclick="buy('green',1000)">🟢 Áo xanh (1000)</button>
+  <button onclick="buy('orange',3000)">🟠 Áo cam (3000)</button>
+  <button onclick="buy('yellow',5000)">🟡 Áo vàng (5000)</button>
+  <button onclick="go('maps')">⬅ Quay lại</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
